@@ -35,7 +35,7 @@ namespace Collection
                 }
                 if (input[i] is string)
                 {
-                    st = (string)input[i];  
+                    st += (string)input[i];  
                 }
             }
 
