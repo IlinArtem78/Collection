@@ -23,7 +23,13 @@ namespace Collection
 
         public void Task13_3_10()
         {
-            string strings = "Подсчитайте, сколько уникальных символов в этом предложении, используя HashSet<T>, учитывая знаки препинания, но не учитывая пробелы в начале и в конце предложения.";
+            while (true)
+            {
+
+            
+            string strings = Console.ReadLine(); 
+
+           // string strings = "Подсчитайте, сколько уникальных символов в этом предложении, используя HashSet<T>, учитывая знаки препинания, но не учитывая пробелы в начале и в конце предложения.";
 
 
             var charn = strings.ToCharArray();
@@ -35,16 +41,26 @@ namespace Collection
                 hSet.Add(n);
 
             }
-            int k = 0;
-            if (hSet.Contains(' '))
-            {
-                k++;
-            }
-
 
             Console.WriteLine("Длина хэш-сета " + hSet.Count);
-            Console.WriteLine()
+            
+            // сохраняем знаки препинания в массив Char
+            var signs = new[] { ',', ' ', '.' };
 
+            // сохраняем числовые символы в массив Char
+            var numbers = new[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+            //  Проверяем, есть ли цифры
+            bool containsNumbers = hSet.Overlaps(numbers);
+            Console.WriteLine($"Коллекция содержит цифры: {containsNumbers}");
+
+            // Отбрасываем знаки препинания и заново считаем
+            hSet.ExceptWith(signs);
+            Console.WriteLine($"Символов без знаков препинания:: {hSet.Count}");
+
+
+
+            }
 
 
 
