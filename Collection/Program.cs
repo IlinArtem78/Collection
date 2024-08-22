@@ -9,6 +9,7 @@ class Program
     {
      //   Task1 task1 = new Task1();
         Task2 task2 = new Task2();
+        /*
         var arrListOut = new ArrayList();   
         var arrListIn = new ArrayList()
         {
@@ -31,10 +32,10 @@ class Program
                 1, 2, 3, 5, "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
             };
             task2.ChangeList(months, missing);
-
-
-
-
+        */
+           
+        Task2 task4 = new Task2();
+        task4.Task13_3_10();
     }
 
   
