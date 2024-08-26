@@ -7,41 +7,27 @@ class Program
 {
     static void Main(string[] args)
     {
-     //   Task1 task1 = new Task1();
-        Task2 task2 = new Task2();
-        /*
-        var arrListOut = new ArrayList();   
-        var arrListIn = new ArrayList()
-        {
-           1,
-               "Самая ",
-               "лучшая ",
-               "коллекция",
-               300,
-
-        };
-        arrListOut = task2.Met(arrListIn);
-
-        var months = new List<string>()
+        try { 
+        Console.WriteLine("Выберите задания 13.6.1 или 13.6.2"); 
+        byte numTask = byte.Parse(Console.ReadLine());
+        switch(numTask)
             {
-                "Jan", "Feb", "Mar", "Apr", "May"
-            };
+                case 1:
+                    Task13_6_1 task13_6_1 = new Task13_6_1();
+                    task13_6_1.Task();
+                break; 
+                case 2:
+                    Task13_6_2 task13_6_2 = new Task13_6_2();
+                break;
+                default:
+                    Console.WriteLine("Выбран неверный номер"); 
+                break;
+            }
+        }
+        catch (Exception ex) {
+        Console.WriteLine(ex.ToString());   
+        }
 
-        var missing = new ArrayList()
-            {
-                1, 2, 3, 5, "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-            };
-            task2.ChangeList(months, missing);
-        
-           
-        Task2 task4 = new Task2();
-        task4.Task13_3_10();
-        
-        TASK3 aSK3 = new TASK3();   
-        aSK3.Task13_4_5();
-        */
-        Task4 task4 = new Task4();
-        task4.Task13_5_8();
     }
 
 

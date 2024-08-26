@@ -33,7 +33,7 @@ namespace Collection
 
 
             var charn = strings.ToCharArray();
-
+            
             HashSet<char> hSet = new HashSet<char>(charn);
            
             foreach(var n in hSet)
